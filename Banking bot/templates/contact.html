@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>|Contact Us</title>
+  <link rel="stylesheet" href="{{url_for('static',filename = 'css/styles3.css')}}">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container"> 
+<main>
+  {% with messages = get_flashed_messages() %}  
+         {% if messages %}  
+               {% for message in messages %}  
+               <div class="alert alert-danger" role="alert">
+                <center>{{message}}</center>
+               </div>
+               {% endfor %}  
+         {% endif %}  
+      {% endwith %}  
+</main> 
+  <form id="contact" action="/contact" method="post">
+    <h3>Contact Form</h3>
+    <h4>Contact us today!</h4>
+    <fieldset>
+      <input placeholder="Full Name" type="text" name="name" id="name" tabindex="1" required autofocus>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Email Address" type="email" name="email" id="email" tabindex="2" required>
+    </fieldset>
+   
+    <fieldset>
+      <input placeholder="subject" id="subject" type="text" name="subject" id="subject" tabindex="4" required>
+    </fieldset>
+    <fieldset>
+      <textarea placeholder="Type your message here...." name="message" id="message" tabindex="5" required></textarea>
+    </fieldset>
+    <fieldset>
+      <button name="submit" type="submit" id="contact-submit" onclick="myFunction()" data-submit="...Sending">Send now</button>
+      <a href="/" class="signup-image-link"><b><h4>Cancel</h4></b></a>
+    </fieldset>
+    <script>
+                  function myFunction() {
+                    alert("Your message is sucessfully submitted");
+                  }
+                </script>
+  </form>
+ 
+  
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js'></script><script  src="{{url_for('static',filename = 'css/script.js')}}"></script>
+
+</body>
+</html>
