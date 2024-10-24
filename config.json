@@ -1,0 +1,15 @@
+{
+	"params":
+	{
+		"local_server":"True",
+		"local_uri":"mysql://root:@localhost/ear",
+		"prod_uri":"mysql://root:@localhost/ear",
+		"fb_url":"https://facebook.com/crime",
+		"tw_url":"https://twitter.com/crime",
+		"git_url":"https://github.com/crime",
+		"gmail_user":"techteam@gmail.com",
+		"gmail_password":"Google@12345"
+
+
+	}
+}
